@@ -1,0 +1,24 @@
+{
+    "name": "code-20221008-muthukumaran",
+    "version": "1.0.0",
+    "description": "BMI Calculator for the given Json objects",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gmkumaran87/code-20221008-muthukumaran.git"
+    },
+    "author": "Muthukumaran",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gmkumaran87/code-20221008-muthukumaran/issues"
+    },
+    "homepage": "https://github.com/gmkumaran87/code-20221008-muthukumaran#readme",
+    "dependencies": {
+        "express": "^4.18.1",
+        "nodemon": "^2.0.20"
+    }
+}
