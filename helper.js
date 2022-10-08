@@ -44,7 +44,7 @@ const bmiCategoriesRiskCalculation = (bmi) => {
         (bmiCategory.category = "Very severel obese"),
         (bmiCategory.healthRisk = "Very high risk");
     }
-    console.log("Categories", bmiCategory);
+
     return bmiCategory;
 };
 

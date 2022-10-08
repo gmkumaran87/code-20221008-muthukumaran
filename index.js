@@ -8,6 +8,7 @@ app.use(express.json());
 app.get("/bmi-calculator", (req, res) => {
     // const newUsers = users.map((user) => {});
 
+    const updatedUser = [];
     for (let user of users) {
         const bmi = bmiCalculator({
             HeightCm: user.HeightCm,
@@ -15,10 +16,26 @@ app.get("/bmi-calculator", (req, res) => {
         });
 
         const { category, healthRisk } = bmiCategoriesRiskCalculation(bmi);
-        console.log("Users", { user, bmi, category, healthRisk });
+
+        const obj = {...user, bmi, category: category, healthRisk: healthRisk };
+
+        updatedUser.push(obj);
     }
 
-    res.status(200).json({ success: true, data: users });
+    // People who are overweight
+
+    const overWeightPeople = updatedUser.filter(
+        (user) => user.category === "Overweight"
+    ).length;
+    console.log("Users", updatedUser, overWeightPeople);
+
+    res
+        .status(200)
+        .json({
+            success: true,
+            OverWeightPeople: overWeightPeople,
+            UserDetails: updatedUser,
+        });
 });
 
 const port = "3000";
