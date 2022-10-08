@@ -3,3 +3,5 @@ The BMI Calculator is served as an HTTP GET endpoint at /bmi-calculator for the 
 npm install for installing the intial setup
 
 npm run deploy for deploying
+
+To run the code npm start
